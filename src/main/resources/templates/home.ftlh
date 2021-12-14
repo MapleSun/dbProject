@@ -4,6 +4,12 @@
     <title>Title</title>
 </head>
 <body>
-    message:${message}
+    <#include "header.ftlh" parse=true encoding="utf-8">
+      <hr/>
+
+
+        message:${message}
+      <hr/>
+    <#include "footer.ftlh" parse=true encoding="utf-8">
 </body>
 </html>

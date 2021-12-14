@@ -1,14 +1,15 @@
-package com.example.project.dataObject;
+package com.example.project.dataobject;
 
 import lombok.Data;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class Passenger {
+public class Passenger implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
@@ -27,6 +28,7 @@ public class Passenger {
 
     private Date DOB;
 
+    @Id
     private String type;
 
 

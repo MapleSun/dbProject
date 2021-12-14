@@ -1,14 +1,18 @@
-package com.example.project.dataObject;
+package com.example.project.dataobject;
 
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
-@Entity // This tells Hibernate to make a table out of this class
+@Entity
+@Table(name = "book_agent")
 @Data
-public class BookAgent {
-
+public class BookAgent implements Serializable {
+    @Id
     private Integer pid;
 
     private String name;

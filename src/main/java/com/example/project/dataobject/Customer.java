@@ -1,4 +1,4 @@
-package com.example.project.dataObject;
+package com.example.project.dataobject;
 
 import lombok.Data;
 

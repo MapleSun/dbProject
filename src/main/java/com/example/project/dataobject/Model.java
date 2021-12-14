@@ -1,21 +1,20 @@
-package com.example.project.dataObject;
+package com.example.project.dataobject;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class Airline {
+public class Model {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
 
     private String name;
 
-    private String city;
+    private String manufc;
 
-    private String hub;
+    private Integer engCnt;
 
-    private String country;
+    private Integer fleetCnt;
 
-    private Integer airportId;
 }

@@ -19,7 +19,7 @@ public class BookAgent implements Serializable {
 
     private String webAddr;
 
-    private Date agentContactNum;
-
-    private String type;
+    private String agentContactNum;
+    @Id
+    private String pType;
 }

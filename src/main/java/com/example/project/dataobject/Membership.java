@@ -13,7 +13,7 @@ public class Membership implements Serializable {
 	@Id
 	private Integer pid;
 
-	private String name;
+	private String mName;
 
 	private String asscAirline;
 
@@ -21,6 +21,6 @@ public class Membership implements Serializable {
 
 	private Date endDate;
 	@Id
-	private String type;
+	private String pType;
 
 }

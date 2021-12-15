@@ -5,10 +5,12 @@ import lombok.Data;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
+@Table(name = "passenger")
 public class Passenger implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -28,6 +30,7 @@ public class Passenger implements Serializable {
 
     private Date DOB;
 
+    private Integer cid;
     @Id
     private String type;
 

@@ -22,6 +22,12 @@ public class HomeController {
 		return "home";
 	}
 
+	@GetMapping(path="/flight")
+	public String flightList(Model model) {
+
+		return "flightList";
+	}
+
 	@GetMapping(path="/login")
 	public String loginPage(Model model) {
 		return "login";
@@ -55,7 +61,7 @@ public class HomeController {
 		user.setEmail(email);
 		user.setUsername(username);
 		user.setEmail(password);
-		user.setType(userEnumType.MEMEBER.getValue());
+		user.setType(userEnumType.MEMBER.getValue());
 		userRepository.save(user);
 		model.addAttribute("message", "Sign Up success");
 		return "home";

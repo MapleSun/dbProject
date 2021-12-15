@@ -1,13 +1,16 @@
 package com.example.project.util;
 
 public enum userEnumType {
-    MEMEBER("member"),
-    ADMIN("admin"),
+    DIRECT("1", "direct"),
+    MEMBER("2", "member"),
+    AGENT("3", "agent"),
     ;
 
-    String value = "";
-    userEnumType(String val) {
+    String value;
+    String msg;
+    userEnumType(String val, String msg) {
         value = val;
+        msg = msg;
     }
 
     public String getValue() {

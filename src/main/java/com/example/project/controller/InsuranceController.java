@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-@RequestMapping(path = "insurance")
+@RequestMapping(path = "/insurance")
 @Controller    // This means that this class is a Controller
 public class InsuranceController {
 	@Autowired // This means to get the bean called userRepository
@@ -35,10 +35,10 @@ public class InsuranceController {
 
 	@Autowired
 	private SessionService sessionService;
-	@GetMapping(path="/")
-	public String hello(Model model) {
-		model.addAttribute("message", "world");
-		return "home";
+	@GetMapping(path="/flightId={flightId}")
+	public String insurance(Model model) {
+
+		return "insurance";
 	}
 
 

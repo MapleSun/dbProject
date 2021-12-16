@@ -28,6 +28,9 @@ public class FlightPassengerServiceImpl implements FlightPassengerService {
     @Autowired
     private AirportRepository airportRepository;
 
+    @Autowired
+    private InsuranceRepository insuranceRepository;
+
 
     public FlightBO getFlightListByCid(Integer cid) {
         Customer customer = customerRepository.findByCid(cid);
@@ -36,6 +39,8 @@ public class FlightPassengerServiceImpl implements FlightPassengerService {
         Optional<Flight> flight = flightRepository.findById(flightPassenger.getFid());
         Optional<Airline> airline = airlineRepository.findById(flight.get().getAirlineId());
         Optional<Airport> airport = airportRepository.findById(airline.get().getAirportId());
+
+        List<Insurance> insurances =
 
         FlightBO flightBO = new FlightBO(passenger.get(), flight.get(), airline.get(), airport.get());
         return flightBO;

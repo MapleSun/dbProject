@@ -13,5 +13,4 @@
     <#include "footer.ftlh" parse=true encoding="utf-8">
 
 </body>
-
 </html>

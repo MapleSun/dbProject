@@ -10,30 +10,25 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto topnav">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
             </li>
+            <#if (customer.getCEmail())?exists>
             <li class="nav-item">
                 <a class="nav-link" href="/flight/list">Buy an Insurance</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"></a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item ">
+                <a class="nav-link" href="/profile" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Profile
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Payment</a>
-                    <a class="dropdown-item" href="#">Invoice</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Payment Method</a>
-                </div>
             </li>
-            <#if (user.cEmail)??>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">${user.cEmail}</a>
-                </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#">${customer.getCEmail()}</a>
+            </li>
             <#else>
                 <li class="nav-item">
                     <a class="nav-link btn btn-primary text-white" type="button" href="/login">log In</a>

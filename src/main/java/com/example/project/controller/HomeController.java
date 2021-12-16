@@ -55,7 +55,6 @@ public class HomeController {
 
 		Customer result = customerRepository.findBycEmail(email);
 		if (password.equals(result.getCPassword())) {
-			model.addAttribute("user", result);
 			model.addAttribute("message", Constants.LOGINSUCCESS);
 			sessionService.setCustomer(request, result);
 		} else {

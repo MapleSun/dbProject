@@ -24,7 +24,7 @@
               <td>${flight.flight.flightNumber}</td>
               <td>${flight.airline.name}</td>
               <td>${flight.airport.name}</td>
-              <td style="width:300px;" onclick="document.location.href='/insurance/${flight.flight.id}'" style="cursor:pointer;"><a>buy</a><td>
+              <td style="width:300px;" onclick="document.location.href='/insurance/flightId=${flight.flight.id}'" style="cursor:pointer;"><a>buy</a><td>
             </tr>
             </#if>
           </tbody>

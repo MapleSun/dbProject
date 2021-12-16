@@ -13,7 +13,7 @@ public class FlightBO{
     Airport airport;
     List<Insurance> insurances;
 
-    public FlightBO(Passenger passenger, Flight flight, Airline airline, Airport airport, List<Insurance> insurances) {
+    public FlightBO(Passenger passenger, Flight flight, Airline airline, Airport airport) {
         this.passenger = passenger;
         this.flight = flight;
         this.airline = airline;

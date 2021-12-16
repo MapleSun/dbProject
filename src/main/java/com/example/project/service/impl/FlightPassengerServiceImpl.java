@@ -40,7 +40,6 @@ public class FlightPassengerServiceImpl implements FlightPassengerService {
         Optional<Airline> airline = airlineRepository.findById(flight.get().getAirlineId());
         Optional<Airport> airport = airportRepository.findById(airline.get().getAirportId());
 
-        List<Insurance> insurances =
 
         FlightBO flightBO = new FlightBO(passenger.get(), flight.get(), airline.get(), airport.get());
         return flightBO;

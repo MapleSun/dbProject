@@ -8,11 +8,11 @@
     <div class="container">
       <form class="form-signin" action="/login" method="post">
               <h2 class="form-signin-heading">Please Log in</h2>
-              <label for="email" class="sr-only">Email address</label>
+              <label for="email" class="">Email address</label>
               <input type="text" name="email" class="form-control" placeholder="Email address" required autofocus>
               <br>
-              <label for="password" class="sr-only">Password</label>
-              <input type="text" name="password" class="form-control" placeholder="Password" required>
+              <label for="password" class="">Password</label>
+              <input type="password" name="password" class="form-control" placeholder="Password" required>
               <br>
               <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
           </form>

@@ -10,13 +10,14 @@ import javax.persistence.Id;
 @Entity // This tells Hibernate to make a table out of this class
 @Data
 public class Customer {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	private Integer cid;
+
 	private Integer pid;
 
 	private String pType;
-
-	private String cid;
 
 	private String cStreet;
 
@@ -26,9 +27,11 @@ public class Customer {
 
 	private String cEmail;
 
+	private String cPassword;
+
 	private String cContactNum;
 
-	private String cPassNum;
+	private Integer cPassNum;
 
 	private String cERFname;
 

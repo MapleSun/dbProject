@@ -8,12 +8,8 @@
     <div class="container">
       <hr/>
 
-
-        message:${message}
       <hr/>
     </div>
     <#include "footer.ftlh" parse=true encoding="utf-8">
-
 </body>
-
 </html>

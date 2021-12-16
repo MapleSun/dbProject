@@ -9,6 +9,8 @@ import java.util.Date;
 @Entity
 @Table(name = "airport_flight")
 @Data
+@IdClass(AirportFlight.class)
+
 public class AirportFlight implements Serializable {
     @Id
     private Integer airportId;
